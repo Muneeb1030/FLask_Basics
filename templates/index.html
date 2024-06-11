@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+Home
+{% endblock page_title %}
+
+{% block page_content %}
+<h1 style="text-align: center">Task Manager</h1>
+
+    <table>
+        <tr>
+            <th>Task</th>
+            <th>Date</th>
+            <th>Action</th>
+        </tr>
+        {% for task in tasks %}
+        <tr>
+            <td>{{ task.content }}</td>
+            <td>{{ task.date.date() }}</td>
+            <td>
+                <a href="/delete/{{ task.id }}">Delete</a>
+                <br>
+                <a href="/update/{{ task.id }}">Update</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+<div class="content">
+
+    <div class="form">
+        <form action="/" method="POST">
+            <input type="text" name="content" id="content">
+            <input type="submit" value="Add Task">
+        </form>
+    </div>
+</div>
+{% endblock page_content %}
