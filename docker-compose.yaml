@@ -1,0 +1,7 @@
+version: '2.27'
+services:
+  flask:
+    build: .
+    container_name: flask_c
+    ports:
+      - 80:5000
