@@ -16,7 +16,7 @@ This project is a simple Todo application developed as part of my learning journ
 - Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/flask-todo-app.git
+https://github.com/Muneeb1030/FLask_Basics.git
 cd flask-todo-app
 ```
 - Create a virtual environment:
